@@ -1,0 +1,4 @@
+interface:
+  display_name: "UF HiPerGator"
+  short_description: "HiPerGator onboarding, SSH, and Slurm workflows"
+  default_prompt: "Use $ufhpg to help me connect to HiPerGator and prepare a job for my allocation."
