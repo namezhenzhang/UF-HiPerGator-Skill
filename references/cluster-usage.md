@@ -6,7 +6,7 @@ Official documentation checked: 2026-09-18. Commands below use placeholders, not
 
 Federated users connect eduVPN to UF, authenticate using the institution bound to their account, and use an SSH key for `hpg.rc.ufl.edu`. See [the illustrated guide](application-guide.md) for setup. HPG passwords are not a fallback for federated SSH.
 
-On the cluster, inspect identity and scheduling associations:
+Select the checks needed for the operation below; this is a command reference, not a mandatory sequence. For submission, verify the relevant identity and scheduling association. For a pending job, begin with `scontrol show job JOB_ID`; expand to association, QOS, or node queries if its reason requires them:
 
 ```bash
 whoami

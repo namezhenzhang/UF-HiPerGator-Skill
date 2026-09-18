@@ -21,7 +21,7 @@ The existing remote `hpg-slurm` skill identified these group-specific resource n
 | Investment allocation, including authorized GPU work | `ericxwang.ucsb` | `ericxwang.ucsb` |
 | CPU-only burst allocation | `ericxwang.ucsb` | `ericxwang.ucsb-b` |
 
-These are lookup candidates, not proof of a new member's permissions. Verify with `showAssoc` and current scheduler queries before using them. Do not send GPU jobs to the CPU-only burst QOS.
+These are lookup candidates, not proof of a new member's permissions. Verify the relevant association before submission, reusing valid results already established in the task. Do not send GPU jobs to the CPU-only burst QOS.
 
 ```bash
 module load ufrc
