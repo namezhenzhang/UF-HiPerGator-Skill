@@ -14,6 +14,8 @@ Support the user's requested HiPerGator task using their actual account and reso
 - Members of Xin Eric Wang's UCSB group: read [ucsb-group.md](references/ucsb-group.md) for the group-specific Account and QOS lookup.
 - New job files: adapt [cpu-test.sbatch](assets/cpu-test.sbatch) or [gpu-test.sbatch](assets/gpu-test.sbatch). These are smoke tests, not training programs.
 
+- Group allocation summaries or shared-QOS headroom: use [resource-monitor.md](references/resource-monitor.md) and the read-only `scripts/monitor.sh` helper. Treat incomplete snapshots as unknown, not zero usage.
+
 ## Establish the relevant context
 
 Collect only the context needed for the current operation and reuse information already established. Explain syntax and review scripts without a cluster connection when live state is not needed. Before submission, verify the selected Account, QOS, partition, work directory, and applicable limits. For pending jobs, start with the specified Job ID and expand queries only as needed. Ask only when a missing detail materially changes the result.

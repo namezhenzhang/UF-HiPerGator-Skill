@@ -47,6 +47,10 @@ Then invoke it with a request such as:
 
 Templates contain placeholders and must be adapted before submission. Their shell syntax is checked; they have not been submitted against a reader's allocation. This repository does not provision accounts, purchase resources, or launch jobs automatically.
 
+## Resource monitoring
+
+On HPG, run `bash scripts/monitor.sh` for an account and QOS snapshot. Use `--detail` for jobs, `--json` for agent-readable data, and `--account NAME` when you have multiple accounts. See [resource monitor](references/resource-monitor.md) for scope, unknown values, and exit codes. The helper only reads scheduler data.
+
 ## Sources and maintenance
 
 Official guidance was checked on **2026-09-18**. Follow the linked UF documentation and current scheduler state for policies, partitions, resource limits, and software versions. This is a community guide, not an official UF publication.
