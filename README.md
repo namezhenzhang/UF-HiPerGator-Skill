@@ -49,7 +49,7 @@ Templates contain placeholders and must be adapted before submission. Their shel
 
 ## Resource monitoring
 
-On HPG, run `bash scripts/monitor.sh` for an account and QOS snapshot. Use `--detail` for jobs, `--json` for agent-readable data, and `--account NAME` when you have multiple accounts. See [resource monitor](references/resource-monitor.md) for scope, unknown values, and exit codes. The helper only reads scheduler data.
+On HPG, run `bash scripts/monitor.sh` for an account and QOS snapshot. Job details are included by default. Use `--summary` for totals only, `--json` for agent-readable data, and `--account NAME` when you have multiple accounts. See [resource monitor](references/resource-monitor.md) for scope, unknown values, and exit codes. The helper only reads scheduler data.
 
 ## Sources and maintenance
 

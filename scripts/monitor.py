@@ -285,7 +285,7 @@ def table(headers, rows):
         print('  '.join(v.ljust(widths[i]) for i, v in enumerate(row)))
 
 
-def render(data, detail=False):
+def render(data, detail=True):
     color = sys.stdout.isatty() and 'NO_COLOR' not in os.environ
     def heading(s):
         print(('\033[1;36m' if color else '') + s + ('\033[0m' if color else ''))
@@ -338,7 +338,10 @@ def render(data, detail=False):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--account', help='Slurm account; required when you have multiple accounts')
-    parser.add_argument('--detail', action='store_true', help='include account job details in terminal output')
+    view = parser.add_mutually_exclusive_group()
+    view.add_argument('--detail', dest='detail', action='store_true', help='show account job details (default)')
+    view.add_argument('--summary', dest='detail', action='store_false', help='show only user and QOS summaries')
+    parser.set_defaults(detail=True)
     parser.add_argument('--json', action='store_true', help='machine-readable snapshot; unknown values are null')
     args = parser.parse_args()
     try:

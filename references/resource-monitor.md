@@ -5,11 +5,11 @@ Run `bash scripts/monitor.sh` from this skill's directory on a HiPerGator login 
 ```bash
 bash scripts/monitor.sh
 bash scripts/monitor.sh --account YOUR_ACCOUNT
-bash scripts/monitor.sh --detail
+bash scripts/monitor.sh --summary
 bash scripts/monitor.sh --json
 ```
 
-The default view shows active users in the selected account and colored QOS allocation bars on a terminal. Detail mode adds task identities, names, partitions, reasons, and available start estimates. `NO_COLOR=1` disables color. Pending start times are scheduler estimates and may be absent or stale.
+The default view includes active users, colored QOS allocation bars, and task identities, names, partitions, reasons, and available start estimates. Use `--summary` to hide task details. `--detail` remains supported and explicitly selects the default view. `NO_COLOR=1` disables color. Pending start times are scheduler estimates and may be absent or stale.
 
 Use this helper when the user asks about group resource allocation or when shared limits matter to submission planning. Do not run it before syntax explanations or every script edit. It takes one snapshot, without polling, submission, cancellation, installation, or configuration changes.
 
